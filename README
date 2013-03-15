@@ -6,3 +6,8 @@
 ******************************************************************************
 *   This git include some test code for linux function.
 ******************************************************************************
+
+1. env.c
+    * Try the getenv() function. This function can get envrioment variable.
+2. fork.c
+    * Try the fork() function. This one demo the basic of parent/child process.
