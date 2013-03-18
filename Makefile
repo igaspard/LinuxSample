@@ -5,7 +5,7 @@
 
 OBJECTS		= 
 LIBRARIES	=
-PROGRAMS	= env fork-exec fork system 
+PROGRAMS	= env fork-exec fork print-pid system 
 
 .PHONY:         all clean
 

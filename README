@@ -8,6 +8,14 @@
 ******************************************************************************
 
 1. env.c
-    * Try the getenv() function. This function can get envrioment variable.
+    * Try the getenv() function. 
+    * This function can get envrioment variable.
 2. fork.c
-    * Try the fork() function. This one demo the basic of parent/child process.
+    * Try the fork() function. 
+    * This one demo the basic of parent/child process.
+3. system.c
+    * Try the system() function. 
+    * This one can call linux command.
+4. print-pid.c
+    * Try getpid(), getppid() function. 
+    * This one show process ID and parent process ID.
