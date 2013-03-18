@@ -21,9 +21,7 @@ int main(int argc, const char *argv[])
 
     printf("argc: %d\n", argc);
     if (argc > 1) {
-        /* code */
         if (!strcmp(argv[1], "debug")) {
-            /* code */
             printf("Debug mode, argv[%d]: %s\n", 1, argv[1]);
         }
         else {
