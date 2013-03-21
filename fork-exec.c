@@ -12,14 +12,14 @@
     
     Returns the process id of the spawned process.  */
 
-int spawn_argv(char *program, const char* argv_list)
+int spawn_argv(char *program, const char **argv_list)
 {
     pid_t child_pid;
 
     child_pid = fork();
     if (child_pid == 0) {
         printf("%s Process forked\n", __func__);
-        execlp(program, argv_list, NULL);
+        execlp(program, *argv_list, NULL);
         fprintf(stderr, "Error occured execlp()\n");
         abort();
     }
@@ -28,7 +28,7 @@ int spawn_argv(char *program, const char* argv_list)
     }
 }
 
-int spawn_arg(char *program, char** arg_list)
+int spawn_arg(char *program, char **arg_list)
 {
     pid_t child_pid;
 
