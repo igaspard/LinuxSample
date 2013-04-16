@@ -37,6 +37,8 @@ int main(int argc, const char *argv[])
     pthread_join(thread1_id, NULL);
     pthread_join(thread2_id, NULL);
 
+    printf("\n");
+
     return 0;
 }
 
