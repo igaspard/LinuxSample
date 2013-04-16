@@ -24,3 +24,5 @@
     * exec whith letter 'p' can search for the program.
     * With letter 'v' use NULL-terminate array arg.
     * letter 'l' use C language argv.
+6. thread-create.c
+    * pthread_create(), pthread_join(). 

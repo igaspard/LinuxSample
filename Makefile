@@ -5,7 +5,9 @@
 
 OBJECTS		= 
 LIBRARIES	=
-PROGRAMS	= env fork-exec fork print-pid system 
+PROGRAMS	= env fork-exec fork print-pid system thread-create
+
+LDLIBS		+= -lpthread
 
 .PHONY:         all clean
 
