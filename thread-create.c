@@ -18,10 +18,9 @@ void* char_print(void* param)
     return NULL;
 }
 
-int main(int argc, const char *argv[])
+pthread_t thread1_id, thread2_id;
+void thread_param()
 {
-    pthread_t thread1_id, thread2_id;
-
     struct char_print_param thread1_args, thread2_args;
 
     thread1_args.c      = 'x';
@@ -38,7 +37,31 @@ int main(int argc, const char *argv[])
     pthread_join(thread2_id, NULL);
 
     printf("\n");
+}
 
+void* show_thread(void* unused)
+{
+    if (!pthread_equal(pthread_self(), thread1_id)) {
+        printf("This one is thread1.\n");
+    }
+    if (!pthread_equal(pthread_self(), thread2_id)) {
+        printf("This one is thread2.\n");
+    }
+}
+
+void thread_simple()
+{
+    pthread_create(&thread1_id, NULL, &show_thread, NULL);
+    pthread_create(&thread2_id, NULL, &show_thread, NULL);
+
+    pthread_join(thread1_id, NULL);
+    pthread_join(thread2_id, NULL);
+}
+
+int main(int argc, const char *argv[])
+{
+    thread_param();
+    thread_simple();
     return 0;
 }
 
