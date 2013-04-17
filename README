@@ -26,3 +26,5 @@
     * letter 'l' use C language argv.
 6. thread-create.c
     * pthread_create(), pthread_join(). 
+7. primes.c
+    * Test thread return value.
