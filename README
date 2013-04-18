@@ -28,3 +28,9 @@
     * pthread_create(), pthread_join(). 
 7. primes.c
     * Test thread return value.
+8. spinlockVSmutex1.cpp
+    * Test the mutex and spinlock performance
+    * g++ spinlockVSmutex1.cpp -lpthread -o mutex_version
+    * g++ spinlockVSmutex1.cpp -DUSE_SPINLOCK -lpthread -o spin_version
+    * time ./mutex_version
+    * time ./spin_version
